@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+option csharp_namespace = "Vulder.Protos";
+
+package archive;
+
+service Archiver {
+    rpc Archive (ArchiveRequest) returns (ArchiveResponse);
+    rpc GetArchivedBranch (ArchivedBranchRequest) returns (ArchivedBranchResponse);
+    rpc GetArchivedTimetable (ArchiveTimetableRequest) returns (ArchiveTimetableResponse);
+}
+
+message ArchiveRequest {
+    string url = 1;
+}
+
+message ArchiveResponse {
+    int32 statusCode = 1;
+}
+
+message ArchiveTimetableRequest {
+    string url = 1;
+    int64 id = 2;
+}
+
+message ArchiveTimetableResponse {
+}
+
+message ArchivedBranchRequest {
+    string url = 1;
+    int64 id = 2;
+}
+
+message ArchivedBranchResponse {
+    message Branches {
+        string Name = 1;
+        string Url = 2;
+        string FullUrl = 3;
+
+        enum BranchType {
+            CLASS = 0;
+            TEACHER = 1;
+            CLASSROOM = 2;
+            OTHER = 3;
+        }
+
+        BranchType Type = 4;
+    }
+
+    repeated Branches branches = 1;   
+}

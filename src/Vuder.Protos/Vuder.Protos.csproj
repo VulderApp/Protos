@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\archive.proto" GrpcServices="Server, Client" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.17.3" />
+    <PackageReference Include="Grpc.Core" Version="2.38.1" />
+    <PackageReference Include="Grpc.Tools" Version="2.38.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <PackageId>Vulder.Protos</PackageId>
+    <Version>0.1.0</Version>
+    <PackageVersion>0.1.0</PackageVersion>
+    <Authors>MRmlik12</Authors>
+    <Company>VulderApp</Company>
+    <RepositoryUrl>https://github.com/VulderApp/Protos</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/VulderApp/Protos</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/VulderApp/Protos/blob/master/LICENSE.md</PackageLicenseUrl>
+  </PropertyGroup>
+
+</Project>
