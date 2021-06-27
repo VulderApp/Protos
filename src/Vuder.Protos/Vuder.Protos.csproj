@@ -21,8 +21,8 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <PackageId>Vulder.Protos</PackageId>
-    <Version>0.1.1</Version>
-    <PackageVersion>0.1.1</PackageVersion>
+    <Version>0.1.2</Version>
+    <PackageVersion>0.1.2</PackageVersion>
     <Authors>MRmlik12</Authors>
     <Company>VulderApp</Company>
     <RepositoryUrl>https://github.com/VulderApp/Protos</RepositoryUrl>
