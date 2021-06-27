@@ -14,7 +14,7 @@ message FindRequest {
 }
 
 message FindResponse {
-    repeated string schools = 1;
+    repeated School schools = 1;
 
     message School {
         string id = 1;
