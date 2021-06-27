@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option csharp_namespace = "Vulder.Protos.Search";
+
+package search;
+
+service Search {
+    rpc Find (FindRequest) returns (FindResponse);
+    rpc Create (CreateRequest) returns (CreateResponse);
+}
+
+message FindRequest {
+    string input = 1;
+}
+
+message FindResponse {
+    repeated string schools = 1;
+
+    message School {
+        string id = 1;
+        string name = 2;
+        string url = 3;
+    }
+}
+
+message CreateRequest {
+    string name = 1;
+    string url = 2;
+    string requesterEmail = 3;
+}
+
+message CreateResponse {
+    string message = 1;
+}

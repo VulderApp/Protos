@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option csharp_namespace = "Vulder.Protos";
+option csharp_namespace = "Vulder.Protos.Archive";
 
 package archive;
 

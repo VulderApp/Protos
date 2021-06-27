@@ -1,0 +1,21 @@
+name: build
+on: 
+  push:
+    branch: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.x
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Build project
+        run: dotnet build --configuration Release --no-restore 
+      - name: Create package
+        run: dotnet pack -c Release
+      - name: Publish NuGet package to nuget.org
+        run: dotnet nuget push src/Vulder.Protos/bin/Release/*.nupkg -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate
