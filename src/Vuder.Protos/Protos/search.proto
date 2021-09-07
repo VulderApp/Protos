@@ -7,6 +7,8 @@ package search;
 service Search {
     rpc Find (FindRequest) returns (FindResponse);
     rpc Create (CreateRequest) returns (CreateResponse);
+    rpc Delete (DeleteRequest) returns (DeleteResponse);
+    rpc Update (UpdateRequest) returns (UpdateResponse);
 }
 
 message FindRequest {
@@ -19,16 +21,35 @@ message FindResponse {
     message School {
         string id = 1;
         string name = 2;
-        string url = 3;
     }
 }
 
 message CreateRequest {
     string name = 1;
-    string url = 2;
-    string requesterEmail = 3;
+    string timetableUrl = 2;
+    string schoolUrl = 3;
+    string requesterEmail = 4;
 }
 
 message CreateResponse {
-    string message = 1;
+    bool isCreated = 1;
+}
+
+message UpdateRequest {
+    string name = 1;
+    string timetableUrl = 2;
+    string schoolUrl = 3;
+    string requesterEmail = 4;
+}
+
+message UpdateResponse {
+    bool isUpdated = 1;
+}
+
+message DeleteRequest {
+    string guid = 1;
+}
+
+message DeleteResponse {
+    bool isDeleted = 1;
 }
