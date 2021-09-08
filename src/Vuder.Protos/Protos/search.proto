@@ -28,7 +28,8 @@ message CreateRequest {
     string name = 1;
     string timetableUrl = 2;
     string schoolUrl = 3;
-    string requesterEmail = 4;
+    string requesterId = 4;
+    string requesterEmail = 5;
 }
 
 message CreateResponse {
@@ -39,7 +40,8 @@ message UpdateRequest {
     string name = 1;
     string timetableUrl = 2;
     string schoolUrl = 3;
-    string requesterEmail = 4;
+    string requesterId = 4;
+    string requesterEmail = 5;
 }
 
 message UpdateResponse {
