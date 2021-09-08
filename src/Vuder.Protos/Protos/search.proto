@@ -37,11 +37,12 @@ message CreateResponse {
 }
 
 message UpdateRequest {
-    string name = 1;
-    string timetableUrl = 2;
-    string schoolUrl = 3;
-    string requesterId = 4;
-    string requesterEmail = 5;
+    string schoolId = 1;
+    string name = 2;
+    string timetableUrl = 3;
+    string schoolUrl = 4;
+    string userId = 5;
+    string userEmail = 6;
 }
 
 message UpdateResponse {
@@ -49,7 +50,8 @@ message UpdateResponse {
 }
 
 message DeleteRequest {
-    string guid = 1;
+    string schoolId = 1;
+    string userId = 2;
 }
 
 message DeleteResponse {
