@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "Vulder.Protos.School";
+
+package school;
+
+service School {
+    rpc CreateSchool (CreateRequest) returns (StatusResponse);
+}
+
+message CreateRequest {
+    string schoolName = 1;
+    string timetableUrl = 2;
+    string schoolUrl = 3;
+    string requesterEmail = 4;
+}
+
+message StatusResponse {
+    bool isCreated = 1;
+    string message = 2;
+}

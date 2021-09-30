@@ -7,6 +7,7 @@
   <ItemGroup>
     <Protobuf Include="Protos\archive.proto" GrpcServices="Server, Client" />
     <Protobuf Include="Protos\search.proto" GrpcServices="Server, Client" />
+    <Protobuf Include="Protos\school.proto" GrpcServices="Server, Client" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,8 +22,8 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <PackageId>Vulder.Protos</PackageId>
-    <Version>0.1.5</Version>
-    <PackageVersion>0.1.5</PackageVersion>
+    <Version>0.1.6</Version>
+    <PackageVersion>0.1.6</PackageVersion>
     <Authors>MRmlik12</Authors>
     <Company>VulderApp</Company>
     <RepositoryUrl>https://github.com/VulderApp/Protos</RepositoryUrl>
